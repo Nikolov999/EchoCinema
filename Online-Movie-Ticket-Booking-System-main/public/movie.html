@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Movie details and showtime selection">
+    <title>Movie Details | Echo Cinema</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="/">Echo <span>Cinema</span></a>
+        <nav class="site-nav"><a href="/">Movies</a><a id="historyLink" class="hidden" href="history.html">My bookings</a><a id="adminLink" class="hidden" href="admin.html">Admin</a><a id="loginLink" class="hidden" href="login.html">Log in</a><span id="navUser" class="demo-user">Loading…</span></nav>
+    </header>
+    <main>
+        <a class="breadcrumb" href="/">Back to movie catalogue</a>
+        <section id="movieDetails" class="details-layout">
+            <div class="panel"><div id="moviePoster" class="poster details-poster"><span>Movie details</span></div></div>
+            <div class="panel">
+                <div class="page-heading"><h1 id="movieTitle">Loading movie…</h1><p id="movieDescription"></p></div>
+                <div class="detail-list">
+                    <div class="detail-item"><span>Genre</span><strong id="movieGenre"></strong></div>
+                    <div class="detail-item"><span>Duration</span><strong id="movieDuration"></strong></div>
+                    <div class="detail-item"><span>Rating</span><strong id="movieRating"></strong></div>
+                    <div class="detail-item"><span>Certificate</span><strong id="movieCertificate"></strong></div>
+                </div>
+                <h2>Select a showtime</h2>
+                <div id="showtimeList" class="showtimes"></div>
+                <p id="movieFeedback" class="feedback" aria-live="polite"></p>
+            </div>
+        </section>
+    </main>
+    <footer>Software Engineering CA2 — Bobo Nikolov — Student ID 24109479</footer>
+    <script src="assets/js/api.js"></script><script src="assets/js/nav.js"></script><script src="assets/js/details.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <base href="/">
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Secure payment and booking confirmation"><title>Payment | Echo Cinema</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header class="site-header"><a class="brand" href="/">Echo <span>Cinema</span></a><nav class="site-nav"><a href="/">Movies</a><a id="historyLink" class="hidden" href="history.html">My bookings</a><a id="adminLink" class="hidden" href="admin.html">Admin</a><a id="loginLink" class="hidden" href="login.html">Log in</a><span id="navUser" class="demo-user">Loading…</span></nav></header>
+    <main>
+        <a class="breadcrumb" href="javascript:history.back()">Back to seat selection</a>
+        <div class="page-heading compact-heading"><h1>Review and pay</h1><p id="paymentModeText">Loading payment configuration…</p></div>
+        <section class="booking-layout">
+            <form id="paymentForm" class="panel">
+                <h2 id="paymentHeading">Payment</h2>
+                <div id="demoPaymentFields" class="form-grid hidden">
+                    <p class="muted full-width">Demonstration mode only. Approved: 4242 4242 4242 4242. Declined: 4111 1111 1111 0000.</p>
+                    <label>Name on card<input id="customerName" type="text" autocomplete="name" maxlength="100" placeholder="Demo Student"></label>
+                    <label>Test card number<input id="cardNumber" type="text" inputmode="numeric" autocomplete="off" maxlength="19" placeholder="4242 4242 4242 4242"></label>
+                    <div class="form-row"><label>Expiry<input id="expiry" type="text" autocomplete="off" maxlength="5" placeholder="12/29"></label><label>Security code<input id="securityCode" type="text" inputmode="numeric" autocomplete="off" maxlength="3" placeholder="123"></label></div>
+                </div>
+                <button id="payButton" class="button" type="submit">Continue</button>
+                <p id="paymentFeedback" class="feedback" aria-live="polite"></p>
+            </form>
+            <aside class="summary-card">
+                <h2>Booking summary</h2>
+                <div class="summary-row"><span>Movie</span><strong id="movieName">Loading…</strong></div><div class="summary-row"><span>Showtime</span><strong id="showtimeText"></strong></div><div class="summary-row"><span>Selected seats</span><strong id="selectedSeatText"></strong></div><div class="summary-row"><span>Subtotal</span><strong id="subtotalText">€0.00</strong></div><div class="summary-row"><span>Discount</span><strong id="discountText">-€0.00</strong></div><div class="summary-row total"><span>Total</span><strong id="totalText">€0.00</strong></div>
+                <div id="promoArea" class="form-grid"><label>Promo code<input id="promoCode" type="text" autocomplete="off" maxlength="30" placeholder="SAVE10"></label><button id="applyPromo" class="button secondary" type="button">Apply promo code</button></div><p id="promoFeedback" class="feedback" aria-live="polite"></p>
+            </aside>
+        </section>
+    </main>
+    <footer>Software Engineering CA2 — Bobo Nikolov — Student ID 24109479</footer>
+    <script src="assets/js/api.js"></script><script src="assets/js/nav.js"></script><script src="assets/js/payment.js"></script>
+</body>
+</html>

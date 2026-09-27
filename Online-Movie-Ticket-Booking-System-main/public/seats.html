@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <base href="/">
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Movie showtime and seat selection"><title>Select Seats | Echo Cinema</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header class="site-header"><a class="brand" href="/">Echo <span>Cinema</span></a><nav class="site-nav"><a href="/">Movies</a><a id="historyLink" class="hidden" href="history.html">My bookings</a><a id="adminLink" class="hidden" href="admin.html">Admin</a><a id="loginLink" class="hidden" href="login.html">Log in</a><span id="navUser" class="demo-user">Loading…</span></nav></header>
+    <main>
+        <a id="backToMovie" class="breadcrumb" href="/">Back to movie details</a>
+        <div class="page-heading compact-heading"><h1>Select available seats</h1><p id="seatInstructions">Seats are read from PostgreSQL. Held or booked seats cannot be selected.</p></div>
+        <section class="booking-layout">
+            <div class="panel">
+                <h2 id="movieName">Loading showtime…</h2><p class="muted"><strong id="showtimeText"></strong> · <span id="screenText"></span></p>
+                <div class="screen">Screen</div>
+                <div class="legend" aria-label="Seat legend"><span><i class="legend-box"></i> Available</span><span><i class="legend-box selected"></i> Selected</span><span><i class="legend-box unavailable"></i> Unavailable</span></div>
+                <div id="seatGrid" class="seat-grid" aria-label="Cinema seats" aria-describedby="seatInstructions"></div>
+            </div>
+            <aside class="summary-card"><h2>Seat summary</h2><div class="summary-row"><span>Selected seats</span><strong id="selectedSeatText">None</strong></div><div class="summary-row total"><span>Total</span><strong id="totalText">€0.00</strong></div><button id="continueToPayment" class="button" type="button">Continue to payment</button><p id="seatFeedback" class="feedback" aria-live="polite"></p></aside>
+        </section>
+    </main>
+    <footer>Software Engineering CA2 — Bobo Nikolov — Student ID 24109479</footer>
+    <script src="assets/js/api.js"></script><script src="assets/js/nav.js"></script><script src="assets/js/seats.js"></script>
+</body>
+</html>

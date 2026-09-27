@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Echo Cinema online movie ticket booking system">
+    <title>Echo Cinema | Movie Catalogue</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="/">Echo <span>Cinema</span></a>
+        <nav class="site-nav" aria-label="Primary navigation">
+            <a href="/">Movies</a>
+            <a id="historyLink" class="hidden" href="history.html">My bookings</a>
+            <a id="adminLink" class="hidden" href="admin.html">Admin</a>
+            <a id="loginLink" class="hidden" href="login.html">Log in</a>
+            <span id="navUser" class="demo-user">Loading…</span>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div>
+                <p class="eyebrow">Full-stack booking system</p>
+                <h1>Find a movie. Choose a seat. Confirm the booking.</h1>
+                <p>The original HTML, CSS, and JavaScript prototype now connects to a Node.js API, PostgreSQL, user accounts, permanent bookings, and Stripe-ready payment processing.</p>
+            </div>
+            <aside class="sprint-card">
+                <strong>System status</strong>
+                <p id="systemStatus">Checking the server and database…</p>
+            </aside>
+        </section>
+
+        <section aria-labelledby="catalogueHeading">
+            <div class="page-heading compact-heading">
+                <h1 id="catalogueHeading">Now showing</h1>
+                <p>Search by title, genre, or keyword.</p>
+            </div>
+            <div class="search-row">
+                <input id="movieSearch" type="search" maxlength="80" autocomplete="off" placeholder="Search movies, genres, or keywords" aria-label="Search movies">
+                <button id="clearSearch" class="button secondary" type="button">Clear search</button>
+            </div>
+            <div id="movieGrid" class="movie-grid" aria-live="polite"></div>
+            <div id="noResults" class="empty-state hidden">No movies match the current search.</div>
+        </section>
+    </main>
+
+    <footer>Software Engineering CA2 — Bobo Nikolov — Student ID 24109479</footer>
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/nav.js"></script>
+    <script src="assets/js/catalog.js"></script>
+</body>
+</html>

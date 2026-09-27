@@ -1,0 +1,31 @@
+{
+  "name": "online-movie-ticket-booking-system",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Full-stack extension of the Software Engineering CA2 Online Movie Ticket Booking prototype.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "db:migrate": "node src/db/migrate.js",
+    "db:seed": "node src/db/seed.js",
+    "db:setup": "npm run db:migrate && npm run db:seed",
+    "test": "node --test tests/*.test.js",
+    "check": "node scripts/check-syntax.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "bcryptjs": "3.0.3",
+    "connect-pg-simple": "10.0.0",
+    "dotenv": "17.4.2",
+    "express": "5.2.1",
+    "express-rate-limit": "8.6.2",
+    "express-session": "1.19.0",
+    "helmet": "8.1.0",
+    "morgan": "1.11.0",
+    "pg": "8.22.0",
+    "stripe": "22.4.0"
+  }
+}
